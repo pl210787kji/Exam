@@ -1,0 +1,7 @@
+@mixin f-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+}
+

@@ -1,0 +1,73 @@
+.choose {
+    @include size(100%, 685px);
+    background: url("../images/choose.jpg") no-repeat top center;
+    background-size: cover;
+    padding: 14% 0;
+
+    & img {
+        width: 350px;
+        margin-left: 125px;
+        position: relative;
+
+        &:first-child {
+            left: -125px;
+
+        }
+    }
+}
+
+.description {
+    @include size(540px, 493px);
+    padding: 40px;
+    @include f-between;
+
+    &__title {
+        font-family: $aleo;
+        font-size: 36px;
+        line-height: 0.72;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 1.63;
+        letter-spacing: 1.6px;
+    }
+}
+
+.button {
+    @include size(225px, 60px);
+    background-color: $blue;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-family: $aleo;
+        font-size: 16px;
+        letter-spacing: 1.2px;
+}
+
+.places {
+    @include size(100%, 337px);
+    background: #333333;
+    border: inherit;
+
+
+    &__menu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 36px;
+    }
+
+    &__icon {
+        @include size(62px); 
+        fill: #ffffff;
+    }
+}
