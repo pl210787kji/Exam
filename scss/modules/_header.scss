@@ -1,142 +1,165 @@
 .header {
     @include size(100%, 820px);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     background: url("../images/header.jpg") no-repeat top center;
     background-size: cover;
     position: relative;
-    color: #fff;
+    color: $white;
 
-    &>.navigation {
-        @include size(100%, 80px);
-        background: $blue;
-        position: absolute;
-        bottom: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-
-    & .navigation--menu {
-        width: 100%;
-    }
-
-    & .navigation--logo {
-        text-align: center;
-        font-size: 24px;
-        letter-spacing: 2.4px;
-
-        &:hover {
-            transform: scale(1.05);
-            transition: .2s;
-        }
-    }
-
-    &__content {
-        height: 320px;
-        @include f-between;
-    }
-    
+    &>.container {
+        @include f-center;
+    } 
 }
 
 .title {
-    width: 352px;
     text-align: justify;
 
     &__name {
-        font-size: 48px;
+        @include font(48px, $fw: 700, $fl: 0.54);        
         letter-spacing: 4.8px;
-        line-height: 0.54;
     }
 
     &__text {
-        font-size: 22px;
-        line-height: 1.18;
-        letter-spacing: 6.2px;
+        @include font(22px, $fw: 300, $fl: 1.18);
+        letter-spacing: 6.82px;
         margin-top: 15px;
     }
 }
 
 .search {
     @include size(650px, 60px);
-    background: #fff;
+    background: $white;
     display: flex;
     justify-content: space-between;
-    padding: 2px 2px 2px 126px;
+    padding: 2px;
+    margin: 50px 0 114px;
+    position: relative;
     
 
     &__text {
         width: 100%;
-        font-size: 14px;
-        line-height: 1.86;
+        @include font(14px, $fl: 1.86);
         letter-spacing: 2.8px;
         text-align: center;
+
+        &:focus {
+        box-shadow: inset 1px 3px 21px 3px rgba(0,0,0,0.19);
+        }
     }
+    
 
     &__button {
+        cursor: pointer;
         background-color: $blue;
         color: inherit;
         width: 150px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include f-center;
+        flex-direction: row;
         text-transform: uppercase;
         font-family: $aleo;
         font-size: 14px;
         letter-spacing: 1.4px;
+
+        &:hover {
+            background: #223c58;
+        }
     }
 
     &__icon {
         @include size(20px, 22px);
-        fill: #fff;
+        fill: $white;
     }
 }
 
 .scroll {
     @include f-between;
-    font-size: 14px;
-    line-height: 1.86;
+    @include font(14px, $fw: 300, $fl: 1.86);   
     letter-spacing: 2.8px;
+    @include pos($pos: absolute, $b: 16%, $l: 50%);
+    transform: translateX(-50%);
     animation: scroll 2s ease-in-out infinite; /*параметры анимации:название, старт, направление...*/
-    animation-delay: 3s;
-
-    // :hover {
-    //     transform: scale(1.05);
-    //     transition: .2s;
-    // }
+   
+    :hover {
+        transform: scale(1.05);
+        transition: .2s;
+    }
 }
 
 @keyframes scroll {
 0% {
-    bottom: 0;
+    bottom: 26%;
 }
 50% {
-    bottom: 10px;
+    bottom: 24%;
 }
 100% {
-    bottom: 0;
+    bottom: 26%;
 }
 }
+
+.navigation {
+    @include size(100%, 80px);
+    background: $blue;
+    @include pos($pos: absolute, $b: 0, $l: 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+    &--menu {
+        width: 100%;
+        @include f-center;
+        flex-direction: row;
+    }
+
+    &--logo {
+        text-align: center;
+        justify-content: center;
+        font-size: 24px;
+        letter-spacing: 2.4px;
+        cursor: pointer;
+
+        &:hover {
+        transform: scale(1.05);
+        transition: .2s;
+        }
+    }
+
+}   
 
 .menu {
     display: flex;
     font-size: 14px;
+    letter-spacing: 2.4px;
     text-transform:uppercase;
     font-family: $aleo;
     align-items: left;
 
     &__item {
         margin-right: 32px;
-        &:hover {
-            transform: scale(1.05);
-            transition: .2s;
-        }
-    }
+    } 
     
+    &__link {
+        text-decoration: none;
+        padding: 25px 0;
+        position: relative;
+        display: inline-block;
+        transition: .3s;
+
+        &::before {
+            content: '';
+            @include size(2px, 2px);
+            @include pos ($b: 20px, $l:-6px);
+            background: $white;
+            transition: 8s;
+            position: absolute;
+            display: none;
+        }
+
+        &:hover {
+           &::before {
+            display: inline-block;   
+            @include  size(calc(100% + 12px), 2px);
+           }
+        }
+    }    
 }
-
-
-

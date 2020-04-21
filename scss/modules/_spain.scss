@@ -1,0 +1,48 @@
+.spain-1,
+.spain-2 {
+    height: 700px;
+
+    & .container>div {
+        padding-top: 229px;
+    }
+}
+
+.desc {
+    @include size(540px, 371px);
+    padding: 50px 30px;
+    background: #232323d6;
+    @include f-between;
+    align-items: flex-start;
+    @include font(20px, $fw: 300, $fl: 1.3);
+    letter-spacing: 1.5px;   
+
+    &__name {
+        text-transform: uppercase;
+        letter-spacing: normal;
+        color: $white;
+    }
+
+    &__text {
+        @include font(16px, $fl: 1.63);
+    }
+
+    & .button {
+        font-weight: normal;
+        margin-top: 19px;
+
+        :hover {
+            font-weight: bold;
+        }
+    }
+}
+
+.spain-1 {
+    background: url('../images/spain-1.jpg') no-repeat top center;
+    background-size: cover;
+}
+
+.spain-2 {
+    background: url('../images/spain-2.jpg') no-repeat top center;
+    background-size: cover;
+}
+

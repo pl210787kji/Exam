@@ -18,9 +18,8 @@
 	<![endif]-->
 </head>
 <body>
-	<div class="container">
-		<header class="header" id="header">
-			<div class="header__content">
+	<header class="header" id="header">
+		<div class="container">
 				<div class="title">
 					<h1 class="title__name logo">Bhromaon</h1>
 					<p class="title__text">Safe Travel Anywhere</p>
@@ -34,10 +33,10 @@
 						</svg>
 					</button>
 				</form>
-				<a href="#" class="scroll">
+				<a href="#choose" class="scroll">
 					<span class="scroll__text">Scroll Down</span>
-					<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-			</div>
+					<i class="fa fa-angle-down" aria-hidden="true"></i>
+				</a>
 			<nav class="navigation">
 				<div class="row navigation--menu">
 					<div class="col-6 logo navigation--logo">Bhromaon</div>
@@ -51,61 +50,122 @@
 					</div>
 				</div>
 			</nav>
-
-		</header>
+		</div>
+	</header>
+		
+	<section class="choose" id="choose">
 		<div class="container">
-		<section class="choose">
-			
-				<div class="row choose-explore">
-					 <div class=" col-6">
-						 <div class="description">
-							<h2 class="description__title">
-								Why Choose Us
-							</h2>
-							<p class="description__text">
-								Tion and dislike men who are so beguiled and demoralized by desire by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee</p>
-							<p class="description__text">Ddislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that.</p>
-							<a href="#" class="button">
-								<span class="button__text">Explore Places</span>
-							</a>	
-						 </div>
-					</div>
-					<div class="col-6">
-						<img src="images/choose-1.jpg" alt="">
-						<img src="images/choose-2.jpg" alt="">
+			<div class="row choose-explore">
+				<div class=" col-6 description">
+						<h2 class="description__title">Why Choose Us</h2>
+						<p class="description__text">Tion and dislike men who are so beguiled and demoralized by desire by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee</p>
+						<p class="description__text">Ddislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that.</p>
+						<a href="#places" class="button">
+							<span class="button__text">Explore Places</span>
+						</a>	
+				</div>
+				<div class="col-6 choose-explore__img">
+					<img src="images/choose-1.jpg" alt="">
+					<img src="images/choose-2.jpg" alt="">
+				</div>
+			</div>
+		</div>	
+	</section>
+				
+	<section class="places" id="places">
+		<div class="container">
+			<div class="places__dots">
+				<img src="images/dots.png" alt="">
+				<img src="images/dots.png" alt="">
+			</div>
+			<ul class="places__menu">
+				<li class="places__item">
+					<a href="#header" class="places__link">
+						<svg class="places__icon places__icon--var1">
+							<use xlink:href="images/icons/icons-sprite.svg#search"></use>
+						</svg> 
+						<span>Search Places</span>
+					</a>
+				</li>
+				<li class="places__item">
+					<a href="#spain-1" class="places__link">
+						<svg class="places__icon places__icon--var2">
+							<use xlink:href="images/icons/icons-sprite.svg#check"></use>
+						</svg> 
+						<span>Select Places</span>
+					</a>
+				</li>
+				<li class="places__item">
+					<a href="#" class="places__link">
+						<svg class="places__icon places__icon--var3">
+							<use xlink:href="images/icons/icons-sprite.svg#like"></use>
+						</svg> 
+						<span>Book & Enjoy</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="spain-1" id="spain-1">
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<div class="desc">
+						<h3 class="desc__country">Spain</h3>
+						<h3 class="desc__name">Grand Spain Madrid</h3>
+						<p class="desc__text">But I must explain to you how all this mistaken idea of account to denouncing pleasure and praising pain was account  born and I account will give you a complete account of the system</p>
+						<a href="#places" class="button">
+							<span class="button__text">Book Now</span>
+						</a>
 					</div>
 				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="spain-2">
+		<div class="container">
+			<div class="row">
+				<div class="offset-6 col-6">
+					<div class="desc">
+						<h3 class="desc__country">Spain</h3>
+						<h3 class="desc__name">Grand Spain Madrid</h3>
+						<p class="desc__text">But I must explain to you how all this mistaken idea of account to denouncing pleasure and praising pain was account  born and I account will give you a complete account of the system</p>
+						<a href="#places" class="button">
+							<span class="button__text">Book Now</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="travel">
+		<h2 class="travel__title">What Our  Tourist Say</h2>
+		<div class="travel__block">
+			<div class="travel__block-pic"></div>
+			<div class="travel__block-desc desc">
+				<h3 class="desc__name">Sam Sumon</h3>
+				<p class="desc__text"><i class="fa fa-quote-left" aria-hidden="true"></i>  But I must explain to you how all this mistaken idea of account to denouncinpleasure and praising pain  But I must explain to you how all this mistaken idea of account to nai denouncing pleasure and praising pain was account  born and I account will give you a complete account of the system was account  born and I account will give you a nai the complete account of the system</p>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">		
+		<h2 class="footer__name logo">Bhromaon</h2>
+		<p class="footer__text">Safe Travel Anywhere</p>
+		<p class="footer__social">
+			<i class="fa fa-facebook" aria-hidden="true"></i>
+			<i class="fa fa-twitter" aria-hidden="true"></i>
+			<i class="fa fa-linkedin" aria-hidden="true"></i>
+			<i class="fa fa-youtube-play" aria-hidden="true"></i>
+			<i class="fa fa-pinterest" aria-hidden="true"></i>
+		</p>
+	</footer>
+	
 			
-		</section>
-				
-		<section class="places">
-					
-						<ul class="places__menu">
-							<li class="places__item"><a href="#" class="places__link">
-								<svg class="places__icon">
-									<use xlink:href="images/icons/icons-sprite.svg#search"></use>
-								</svg> <span>Search Places</span></a>
-							</li>
-							<li class="places__item"><a href="#" class="places__link">
-								<svg class="places__icon">
-									<use xlink:href="images/icons/icons-sprite.svg#search"></use>
-								</svg> <span>Search Places</span></a>
-							</li>
-							<li class="places__item"><a href="#" class="places__link">
-								<svg class="places__icon">
-									<use xlink:href="images/icons/icons-sprite.svg#search"></use>
-								</svg> <span>Search Places</span></a>
-							</li>
-		
-						</ul>
-					
-				
-				
-			
-		</section>
-	</div>
-			
-	</div>
+	
 
 	
 

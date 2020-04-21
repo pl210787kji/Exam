@@ -1,0 +1,62 @@
+.places {
+    @include size(100%, 337px);
+    background: #333333;
+   
+    & .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__dots {
+        position: absolute;
+        left: 188px;
+        top: 54px;
+
+
+        & img {
+            margin: 0 40px;
+            width: 300px;
+        }
+    }
+   
+    &__menu {
+        width: 100%;
+        @include f-around;
+    }
+
+    &__link {
+        
+        @include f-center;
+        font-size: 36px;
+
+        &>* {
+            margin: 18px 0;
+        }
+
+        &:hover {
+            >* {
+            fill: $hover;
+            transform: translateY(5px);
+            transition: .3s;
+            }
+        }
+    }
+
+    &__icon {
+        @include size(62px);
+        fill: #5474fd;
+    
+
+        &--var2 {
+            fill: #ff6363;
+        }
+
+        &--var3 {
+            fill: #00a2ff;
+        }
+
+        
+    }
+}
